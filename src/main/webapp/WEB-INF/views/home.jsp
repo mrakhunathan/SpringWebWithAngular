@@ -9,7 +9,6 @@
 	rel="stylesheet" type="text/css" /> --%>
 <!-- Scripts -->
 
-
 <script
 	src="${pageContext.request.contextPath}/resources/static/js/lib/angular.min.js"
 	type="text/javascript"></script>
@@ -38,7 +37,18 @@
 	src="${pageContext.request.contextPath}/resources/static/js/application/AppController.js"
 	type="text/javascript"></script>
 
+<script
+	src="${pageContext.request.contextPath}/resources/static/js/application/AppConfig.js"
+	type="text/javascript"></script>
+
 </head>
-<body ng-app="rootApplication" ng-controller="rootController">Data
+<body ng-app="rootApplication" ng-controller="rootController">
+	<br>
+	<a href="#/index" style="color: red;">Index</a>
+	<br>
+	<a href="#/results" style="color: red;">Results</a>
+	<div>
+		<ng-view></ng-view>
+	</div>
 </body>
 </html>

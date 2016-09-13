@@ -1,1 +1,1 @@
-var rootApp = angular.module('rootApplication', ['RestHelper']);
+var rootApp = angular.module('rootApplication', [ 'ngRoute', 'RestHelper' ]);
