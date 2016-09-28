@@ -1,5 +1,6 @@
 package com.organization.applicationname.services.impl;
 
+import java.util.List;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,5 +21,10 @@ public class SampleServiceImpl implements SampleService {
 		sampleEntity.setId((new Random()).nextInt(10000));
 		sampleEntity.setName("" + (new Random()).nextInt(10000));
 		sampleEntityRepository.save(sampleEntity);
+	}
+
+	@Override
+	public List<SampleEntity> getAllSampleEntities() {
+		return sampleEntityRepository.findAll();
 	}
 }
